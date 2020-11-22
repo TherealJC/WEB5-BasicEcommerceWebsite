@@ -17,32 +17,35 @@
             <a class="shop" title="Shop" href="/pages/shop" target="_self">Shop</a>
             <a class="login" title="Log In" href="/pages/login" target="_self">Log In</a>
             <a class="signup" title="Sign Up" href="/pages/signup" target="_self">Sign Up</a>
+            <script src="../index.js"></script>
         </div>
     
       <div class="minibanner">
           <h1>Log In</h1>
       </div>
-    
-      <div class="loginBox">
-        <div><h3>Please Enter Your Log-in Details</h3></div>
-          <div class="form1">
-            <span>Email:</span>
-            <input type="text" name="name" autocomplete="off" required/>
-            <label for="name" class="label-name"></label>
-        </div>
-        <div class="form2">
-            <span>Password: </span>
-            <input type="text" name="name" autocomplete="off" required/>
-            <label for="name" class="label-name"></label>
+      
+    <div class="alignContent">
+      <div class="container">
+          <form id="form" class="form">
+            <h5>Please enter your login details</h5>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="text" id="inputEmail" placeholder="Enter email"/>
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password" id="inputPassword" placeholder="Enter password"/>
+            </div>
+            <input type="submit" value="Log In" id="submit" class="submit" onclick="return logInUser();"/>
+          </form>
         </div>
     </div>
-    
-    <a class ="button" href="/pages/shop" target="_self"></a>
 
-    <div class="footer">
-        <a class =icon1 href="https://github.com/TherealJC" title="GitHub" id="Github"></a>
-        <a class =icon2 href="https://www.facebook.com/" title="Facebook" id="Facebook"></a>
-        <p class="footerP">Contact</p>
-    </div>
+    <div class="footer">     
+        <ul class="social-icons">
+          <li><a href="https://github.com/TherealJC" title="GitHub" class="icon1"></a></li>
+          <li><a href="https://www.facebook.com/jamie.crowther.336/" title="Facebook" class="icon2"></a></li>
+           </ul>
+      </div>
 </body>
 </html>

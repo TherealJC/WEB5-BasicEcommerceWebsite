@@ -1,18 +1,21 @@
 /*Html and body, intial page set up*/
 
+* {
+  margin: 0;
+}
 html {
   height: 100%;
 }
 
 body {
+  height: 100%;
   min-height: 100vh; /*Pushes the footer to the bottom of the devices view height*/
-  display: flex; /*This is used for the footer to keep it at the bottom of the page*/
+  display: flex; /*This is used for the footer to keep it at the bottom of the page, it stretches the page content to fit the page*/
   flex-direction: column; /*Makes page content top to bottom*/
   margin: 0;
   padding: 0;  /*These 2 remove built in padding/margin to make it so that the content is pushed to the very edges of a screen */
-  font-family: Helvetica;
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  font-family: Helvetica; /*sets font to use*/
+  background: url(/img/bannerbackground.jpeg) top left/cover;
 }
 
 /*Header*/
@@ -20,8 +23,9 @@ body {
 .header {
   display: flex; /*sets the layout to flex*/
   flex-direction: row; /*sets container layout to left to right*/
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  background-image: linear-gradient(.25turn, #7ae4ff 5%, #049aff 74%);
+
+  height: 50px;
 }
 
 .logo{ 
@@ -30,6 +34,7 @@ body {
   background-size: 55%; /*makes the image smaller than the button*/
   background-color: #53cdf2;
   border-bottom: solid lightblue 1px;
+  transition-duration: 0.4s;
 }
 
 .logo:hover {
@@ -96,27 +101,25 @@ body {
 
 /*Banner and mini banner*/
 
-.banner {
+.banner { /*The banner on the home screen*/
   display:flex;
   flex-direction: column; /*Changes the display layout to column form (top to bottom)*/
-  color: white;
-  background: url(/img/bannerbackground.jpeg) top left/cover no-repeat;
+  color: white; /**/
   height: 300px; /*sets the height of the banner*/
-  justify-content: center; /*Align to the center of the left/right size of the page/item*/
   justify-content: space-around;
   align-items: center; /*Align to the center of the top/bottom size of the page/item */
 }
 
-h1 {
-  font-size: 60px;
+.h1 { /*1st text in home screen banner*/
+  font-size: 50px;
 }
 
-h2 {
+h2 { /*2nd text in home screen banner*/
   font-size: 32px;
   font-style: italic;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .banner h1, .banner h2 {
@@ -128,7 +131,6 @@ h2 {
   display:flex;
   flex-direction: column; /*Changes the display layout to column form (top to bottom)*/
   color: white;
-  background: url(/img/bannerbackground.jpeg) top left/cover no-repeat;
   height: 80px; /*sets the height of the banner*/
   justify-content: center; /*Align to the center of the left/right size of the page/item*/
   justify-content: space-around;
@@ -145,40 +147,43 @@ h1 {
 
 /*Home Content*/
 
+
+/*Shop button image*/
 .buy {
-background: url(/img/buy.png) no-repeat center;
-height: 95px;
-width: 20%;
-background-size: 100%;
-margin: auto;
-margin-top: 15px;
+background: url(/img/shopnow.png) no-repeat center; /*sets image*/
+background-color: white; /*stops the background image from showing through the see through layer of image*/
+height: 62px; /*sets height of the image*/
+width: 17%; /*sets width*/
+background-size: 100%; /*makes image fill the space provided*/
+margin: 40px auto 60px auto; /*top, right, bottom, left*/
 transition-duration: 0.4s;
+border-radius: 3%;
 }
 
 .buy:hover {
-  opacity: 0.7;
+  transform: scale(1.2);
 }
 
-
-/*body text*/
+/*index body text*/
 .writing {
-  display: flex;
+  display: block; /*makes elements go top to bottom, like column*/
   text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-top: auto;
+  margin-top: auto; /*pushes writing to the bottom of the page*/
+  /* background-color: rgb(101, 221, 252);
+  padding: 20px 20px 20px 20px;
+  margin: 0 auto 0 auto;
+  border-radius: 0.5%; */
 }
 
-.writing h1 { /*changes the "Our Story text*/
-  padding: 30px;
-  font-size: 35px;
+.writing h1 { /*changes the "News" header*/
+  padding-bottom: 20px;
+  font-size: 30px;
   text-decoration: underline;
-  text-shadow: none;
+  text-shadow: none; /*removes shadow*/
 }
 
-.writing {
-  font-size: 18px;
+.writing { /*text underneath 'News'*/
+  font-size: 16px;
 }
 
 
@@ -186,13 +191,13 @@ transition-duration: 0.4s;
 
 /*Shop Page Content*/
 
-.display {
-  padding: 20px;
+.display { /*container for page content*/
+  margin: 40px; /*adds space on all sides*/
 }
 
-.display h3 {
-  border-bottom: solid black 1px;
-  padding-left: 25px;
+.display h3 { /*Row headers (category, on sale etc)*/
+  padding: 20px 0px 0px 11px; /*top right bottom left*/
+  margin-bottom: 10px;
 }
 
 .row1 {
@@ -201,11 +206,16 @@ transition-duration: 0.4s;
   height: 190px; /*sets the height of the row*/
 }
 
-.captions {
+.captions { /*container for text below product images*/
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-left: 20px;
+  padding-right: 25px; /*pushes text to line up with images*/
+}
+
+.captions p { /*text below the product images*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .captions a {
@@ -217,6 +227,7 @@ transition-duration: 0.4s;
   background-color: white;
   background-size: 100%; /*sets the height of the image to fill the container*/
   flex-basis: 25%; /*sets image width*/
+  transition-duration: 0.4s;
 }
 
 .item2 {
@@ -224,112 +235,129 @@ transition-duration: 0.4s;
   background-color: white;
   background-size: 100%; /*sets the size of the image*/
   flex-basis: 23%;
+  transition-duration: 0.4s;
 }
 
 .item3 {
   background: url(/img/product3.jpg) no-repeat center;
   background-size: 100%; /*sets the size of the image*/
   flex-basis: 24%;
+  transition-duration: 0.4s;
 }
 
 .item4 {
   background: url(/img/product4.jpg) no-repeat center;
   background-size: 100%; /*sets the size of the image*/
   flex-basis: 23%;
-  border: solid black 1px;
+  transition-duration: 0.4s;
 }
 
 .item1:hover, .item2:hover, .item3:hover, .item4:hover {
-  opacity: 0.8;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+  transform: scale(1.1);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.19);
 }
 
 
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-/*Log In and Sign Up Page*/
-
-.loginBox {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border: solid black 1px;
-  width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #E7E7E7;
-}
-
-.signupBox {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border: solid black 1px;
-  width: 410px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #E7E7E7;
-}
-
-.signupBox h3 {
+/*for BUY NOW link*/
+.complete {
+  font-size: 20px;
   text-align: center;
-}
-
-.form1 {
-  padding-top: 20px;
-  padding-left: 28px;
-}
-
-.form2 {
-  padding-top: 20px;
-}
-
-.form3 {
-  padding-top: 10px;
-  padding-right: 120px;
-  text-align: end;
-}
-
-.button {
-  width:130px;
-  height:130px;
-  padding: 25px;
-  background: url(/img/login.png) no-repeat center;
-  background-size: contain;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(43, 226, 83);
+  color: rgb(255, 255, 255);
   transition-duration: 0.4s;
-  transition-timing-function: ease-out;
 }
 
 .complete:link {
   text-decoration: none; /*Changes how the link looks when it has been unvisited*/
 }
 
-.complete p {
-  font-size: 20px;
-  text-align: center;
-  max-width: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgb(43, 226, 83);
-  color: rgb(255, 255, 255);
-}
-
-.complete p:hover {
+.complete:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
-  text-decoration: underline;
   color: #000;
+  cursor: pointer;
 }
 
 
-.button:hover {
-  opacity: 0.7;
+/*------------------------------------------------------------------------------------------------------------------------*/
 
+/*Log In and Sign Up Page*/
+
+.alignContent { /*Used to center the form containers in the login and signup pages*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container { /*The outer area of the login form, the container, sets the outer size of the form*/
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+h2 { /*'Log In header text*/
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form { /*The form (div content inside of the container)*/
+  padding: 30px 40px; /*adds padding around the edges of the box and the content*/
+}
+
+.form-control { /*controls space around the input boxes*/
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  width: 298px;
+}
+
+.form-control label { /*'email' and 'password' text above input boxes*/
+  color: rgb(99, 99, 99);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input { /*The input of both boxes*/
+  border: 2px solid #dfdfdf;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px; /*increases size of input boxes*/
+  font-size: 14px;
+}
+
+.form-control input:focus { /*changes effect when boxes are clicked on*/
+  outline: 0;
+  border-color: #777;
+}
+
+.submit { /*submit button*/
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  transition-duration: 0.4s;
+}
+
+.submit:hover {
+  background-color: #26a4f8;
+}
+
+h5 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h5 a:link {
+  text-decoration: none; /*removes underline from link*/
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -337,17 +365,23 @@ transition-duration: 0.4s;
 /*Footer*/
 
 .footer {
-  display: flex; /*sets the layout to flex*/
-  flex-direction: row; /*sets container layout to left to right*/
+  Width: 100%; /*sets footer to equal the whole width of a page*/
+  bottom: 0; /*keeps footer at bottom of page*/
+  height: 50px;
+  margin-right: auto;
   margin-top: auto; /*keeps space between the footer and page content*/
-  font-size: 15px; /*This sets the height of the container*/
-  background-color: rgba(23, 130, 230, 0.918);
+  background-color: rgba(115, 187, 255, 0.918);
 }
 
-.icon1 {
-  flex: 1; /*sets the width of the button */
+.social-icons {
+  display: flex;
+  justify-content: left; /*moves icons to the left side of the footer*/
+  padding-left: 0; /*removes padding created from using li*/
+}
+
+.icon1 { /*set github logo as background*/
   background: url(/img/ghlogo.png) no-repeat center;
-  background-size: contain;
+  background-size: contain; /*fills the container, the size is declared in .social-icons a*/
   background-color: rgb(122, 140, 146);
   transition-duration: 0.4s;
 }
@@ -357,8 +391,7 @@ background-color: rgb(112, 112, 112);
 }
 
 .icon2 {
-  flex: 1;
-  background: url(/img/fblogo.png) no-repeat center;
+  background: url(/img/fblogo.png) no-repeat center; /*set facebook logo as background*/
   background-size: contain;
   background-color: rgb(11, 91, 211);
   transition-duration: 0.4s; 
@@ -368,9 +401,12 @@ background-color: rgb(112, 112, 112);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
-.footerP {
-  font-style: italic;
-  flex: 5; /*takes up a wider area*/
-  text-align: center;
-  color: black;
+.social-icons li {
+  display: inline-block; /*removes bullet points*/
+}
+
+.social-icons a { /*controls the a links*/
+  display: flex;
+  width: 150px;
+  height: 50px;
 }

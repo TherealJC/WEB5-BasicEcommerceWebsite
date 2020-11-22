@@ -8,6 +8,7 @@
         <meta property="og:url" content="www.therealjc.me" />
         <link rel="stylesheet" type="text/css" href="../index.css">
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+        <script src="../index.js"></script>
     </head>
 
     <body>
@@ -22,47 +23,38 @@
       <div class="minibanner">
         <h1>Sign Up</h1>
     </div>
-
-          <div class="signupBox">
-
-            <div><h3>Don't have an account yet ? Sign up for free here !</h3></div>
-
-            <div><h3>Please Enter Your Log-in Details</h3></div>
-              <div class="form3">
-                <span>First Name:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>Last Name:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>Email:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>Street Address:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>City:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>Region:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div>
-            <div class="form3">
-                <span>Zipcode:</span>
-                <input type="text" name="name" autocomplete="off" required/>
-                <label for="name" class="label-name"></label></div> <br>
-          <a class="complete" href="/pages/login"><p>Complete</p></a>
+    
+    <div class="alignContent">
+        <div class="container">
+        <form id="form" class="form">
+          <h5>Please enter your details here</h5>
+          <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username"/>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email"/>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password"/>
+          </div>
+          <div class="form-control">
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" placeholder="Please re-enter password"/>
+          </div>
+          <input type="submit" value="Sign-Up" id="signup" class="submit" onclick="return signUpUser();"/>
+        </form>
+        <h5>Already have an account ? <a href="/pages/login.html">Log In Here</a></h5>
       </div>
-      
-      <div class="footer">
-        <a class =icon1 href="https://github.com/TherealJC" title="GitHub" id="Github"></a>
-        <a class =icon2 href="https://www.facebook.com/" title="Facebook" id="Facebook"></a>
-        <p class="footerP">Contact</p>
     </div>
+      
+      <div class="footer">     
+        <ul class="social-icons">
+          <li><a href="https://github.com/TherealJC" title="GitHub" class="icon1"></a></li>
+          <li><a href="https://www.facebook.com/" title="Facebook" class="icon2"></a></li>
+           </ul>
+      </div>
 </body>
 </html>

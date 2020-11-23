@@ -57,6 +57,7 @@ body {
   text-decoration: none;
   border-radius: 2px;         /*gives Curved Edges */
   transition-duration: 0.4s;
+  height: 50px;
 }
 
 .logo:hover {
@@ -72,6 +73,7 @@ body {
   text-decoration: none;
   border-radius: 2px;         /*gives Curved Edges */
   transition-duration: 0.4s;
+  height: 50px;
 }
 .home:hover {
   background-color: #87CEFA; /* Button colour on hover*/

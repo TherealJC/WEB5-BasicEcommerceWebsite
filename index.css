@@ -52,7 +52,7 @@ body {
 .logo{ 
   width: 200px; /*sets the width the button/item */
   background: url(/img/tcelogo.jpg) no-repeat center; /*stops image from repeating and aligns to the center of the item*/
-  background-size: contain; /*makes the image smaller than the button*/
+  background-size: 100%; /*makes the image smaller than the button*/
   background-color: #53cdf2;
   border-bottom: solid lightblue 1px;
   transition-duration: 0.4s;

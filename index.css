@@ -68,7 +68,6 @@ body {
 
 .home {
   color: black;             /*font colour */
-  padding: 15px 32px;
   flex-basis: 10%;
   text-align: center;
   text-decoration: none;
@@ -78,13 +77,11 @@ body {
   height: 100%;
 }
 .home:hover {
-  background-color: #87CEFA; /* Button colour on hover*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
 .shop {
   color: black;             /*font colour */
-  padding: 15px 32px;
   flex-basis: 10%;
   text-align: center;
   text-decoration: none;
@@ -94,14 +91,12 @@ body {
   height: 100%;
 }
 .shop:hover {
-  background-color: #87CEFA;
   color: white; /*font colour*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
 .login {
   color: black; 
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   border-radius: 2px;
@@ -111,14 +106,12 @@ body {
   height: 100%;
 }
 .login:hover {
-  background-color: #87CEFA;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }
 
 .signup {
   color: black;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   border-radius: 2px;   
@@ -127,7 +120,6 @@ body {
   height: 100%;
 }
 .signup:hover {
-  background-color: #87CEFA;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
 }

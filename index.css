@@ -27,7 +27,6 @@ body {
   flex-direction: row; /*sets container layout to left to right*/
   width: 100% /*set header to take up the whole width of page space*/;
   height: 50px;
-  max-height: 50px;
   background-image: linear-gradient(.25turn, #7ae4ff 5%, #049aff 74%);
   padding-top: 0;
 }
@@ -43,6 +42,11 @@ body {
 .header span { /*User: */
   margin: auto;
   margin-left: 550px;
+}
+
+.header a {
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 .logo{ 
@@ -374,7 +378,7 @@ h5 a:link {
 .footer {
   Width: 100%; /*sets footer to equal the whole width of a page*/
   bottom: 0; /*keeps footer at bottom of page*/
-  height: 50px;
+  height: 40px;
   margin-right: auto;
   margin-top: auto; /*keeps space between the footer and page content*/
   background-color: rgba(115, 187, 255, 0.918);
@@ -415,5 +419,5 @@ background-color: rgb(112, 112, 112);
 .social-icons a { /*controls the a links*/
   display: flex;
   width: 150px;
-  height: 50px;
+  height: 40px;
 }

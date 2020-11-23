@@ -50,6 +50,7 @@ body {
 }
 
 .logo{ 
+  background-size: contain;
   color: black;             /*font colour */
   padding: 15px 32px;
   flex-basis: 20%;
@@ -166,17 +167,6 @@ h1 { /*header text underneath time tag*/
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*Shop/browse button image*/
 .shopNow {
 background: url(/img/shopnow.png) no-repeat center; /*sets image*/
@@ -205,7 +195,6 @@ border-radius: 3%;
   padding-top: 15px;
   font-size: 16px;
 }
-
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 

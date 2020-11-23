@@ -158,7 +158,7 @@ const userAcc =  document.getElementById('userAcc'); //set var for p tag in head
 
 function displayUser() {
     if (localStorage.getItem('username') === null) { //If no username has been set, 
-        userAcc.textContent = 'Unregistered User';
+        userAcc.textContent = 'Guest';
       } else {
         userAcc.textContent = localStorage.getItem('username'); //change the tags inner html to the users localstorage username
       }

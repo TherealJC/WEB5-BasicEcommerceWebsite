@@ -50,7 +50,7 @@ body {
 }
 
 .logo{ 
-  flex-basis: 15%; /*sets the width the button/item */
+  width: 200px; /*sets the width the button/item */
   background: url(/img/tcelogo.jpg) no-repeat center; /*stops image from repeating and aligns to the center of the item*/
   background-size: 55%; /*makes the image smaller than the button*/
   background-color: #53cdf2;
@@ -65,7 +65,7 @@ body {
 }
 
 .home {
-  flex-basis: 10%; /*sets the width of the button/item*/
+  width: 200px; /*sets the width of the button/item*/
   background: url(/img/homeicon.jpg) no-repeat center; /*sets the image*/
   background-size: 25%; /*sets the size of the image*/
   transition-duration: 0.4s;  /*Makes the hover much smoother, allowing a 0.4 second delay before changing effects*/

@@ -26,7 +26,7 @@ body {
   display: flex; /*sets the layout to flex*/
   flex-direction: row; /*sets container layout to left to right*/
   width: 100% /*set header to take up the whole width of page space*/;
-  height: 50px;
+  height: 40px;
   background-image: linear-gradient(.25turn, #7ae4ff 5%, #049aff 74%);
   padding-top: 0;
 }

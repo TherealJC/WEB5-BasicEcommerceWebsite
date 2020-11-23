@@ -15,21 +15,22 @@
       <a class="logo" title="The Crowther Express" href="/index" target="_self"></a>
       <a class="home" title="Home Page" href="/index" target="_self"></a>
       <a class="shop" title="Shop" href="/pages/shop" target="_self">Shop</a>
+      <span>User: </span><p id='userAcc' title='username'>Username</p>
       <a class="login" title="Log In" href="/pages/login" target="_self">Log In</a>
       <a class="signup" title="Sign Up" href="/pages/signup" target="_self">Sign Up</a>
   </div>
 
-  <div class="banner">
-      <h1>The Crowther Express</h1>
-      <h2>"Offering the best prices in the world since 2020"</h2>
-  </div>
+  <time id='time'></time>
+  <h1>
+      <span id='greeting'>Welcome to the Crowther Express</span>
+      <span id='name'></span>
+  </h1>
   
-  <a class="buy" href="/pages/shop" title="Shop Now" target="_self"></a>
-
+  <a class="shopNow" href="/pages/shop" title="Shop Now" target="_self"></a>
 
 <div class="writing">
     <h1>News</h1>
-    <p>Introducing Javascript ! You can now sign up and it will be saved in the local storage, this account can then be used to log in ! </p>
+    <p>Introducing Javascript ! You can now sign up and it will be saved in the local storage, you can then login and will get a special greeting on the home page ! </p>
 </div>
 
   <div class="footer">     
@@ -38,5 +39,7 @@
         <li><a href="https://www.facebook.com/" title="Facebook" class="icon2"></a></li>
        </ul>
   </div>
+
+  <script src="/index.js"></script>
 </body>
 </html>

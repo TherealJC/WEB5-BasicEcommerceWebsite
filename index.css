@@ -1,20 +1,22 @@
 /*Html and body, intial page set up*/
 
 * {
-  margin: 0;
+  margin: 0; /*removes built in padding and margins*/
+  padding: 0;
 }
+
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  height: 100%;
   min-height: 100vh; /*Pushes the footer to the bottom of the devices view height*/
   display: flex; /*This is used for the footer to keep it at the bottom of the page, it stretches the page content to fit the page*/
   flex-direction: column; /*Makes page content top to bottom*/
-  margin: 0;
-  padding: 0;  /*These 2 remove built in padding/margin to make it so that the content is pushed to the very edges of a screen */
-  font-family: Helvetica; /*sets font to use*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif; /*sets font to use*/
   background: url(/img/bannerbackground.jpeg) top left/cover;
 }
 
@@ -23,9 +25,23 @@ body {
 .header {
   display: flex; /*sets the layout to flex*/
   flex-direction: row; /*sets container layout to left to right*/
-  background-image: linear-gradient(.25turn, #7ae4ff 5%, #049aff 74%);
-
+  width: 100% /*set header to take up the whole width of page space*/;
   height: 50px;
+  background-image: linear-gradient(.25turn, #7ae4ff 5%, #049aff 74%);
+  padding-top: 0;
+}
+
+.header p { /*User account thats logged in display text*/
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-left: 0;
+}
+
+.header span { /*User: */
+  margin: auto;
+  margin-left: 550px;
 }
 
 .logo{ 
@@ -110,46 +126,50 @@ body {
   align-items: center; /*Align to the center of the top/bottom size of the page/item */
 }
 
-.h1 { /*1st text in home screen banner*/
-  font-size: 50px;
-}
-
-h2 { /*2nd text in home screen banner*/
-  font-size: 32px;
-  font-style: italic;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .banner h1, .banner h2 {
   margin: 0;
   text-shadow: 2px 2px 6px #000;
 }
 
 .minibanner {
-  display:flex;
-  flex-direction: column; /*Changes the display layout to column form (top to bottom)*/
-  color: white;
-  height: 80px; /*sets the height of the banner*/
-  justify-content: center; /*Align to the center of the left/right size of the page/item*/
-  justify-content: space-around;
-  align-items: center; /*Align to the center of the top/bottom size of the page/item */
-}
-
-h1 {
-  font-size: 40px;
-  margin: 0;
-  text-shadow: 2px 2px 6px #000;
+  padding-top: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 /*Home Content*/
 
+#time { /*the time tag in index*/
+  margin-top: 5%;
+  font-size: 8rem;
+}
 
-/*Shop button image*/
-.buy {
+h1 { /*header text underneath time tag*/
+  margin-bottom: 3rem;
+}
+
+/*reduces size of the clock/time when on smaller device*/
+@media (max-width: 700px) { 
+  #time {
+    font-size: 6rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Shop/browse button image*/
+.shopNow {
 background: url(/img/shopnow.png) no-repeat center; /*sets image*/
 background-color: white; /*stops the background image from showing through the see through layer of image*/
 height: 62px; /*sets height of the image*/
@@ -160,29 +180,20 @@ transition-duration: 0.4s;
 border-radius: 3%;
 }
 
-.buy:hover {
+.shopNow:hover {
   transform: scale(1.2);
 }
 
-/*index body text*/
-.writing {
-  display: block; /*makes elements go top to bottom, like column*/
-  text-align: center;
-  margin-top: auto; /*pushes writing to the bottom of the page*/
-  /* background-color: rgb(101, 221, 252);
-  padding: 20px 20px 20px 20px;
-  margin: 0 auto 0 auto;
-  border-radius: 0.5%; */
-}
-
 .writing h1 { /*changes the "News" header*/
-  padding-bottom: 20px;
   font-size: 30px;
   text-decoration: underline;
   text-shadow: none; /*removes shadow*/
+  margin-bottom: auto;
+  padding-top: 50px;
 }
 
-.writing { /*text underneath 'News'*/
+.writing p { /*text underneath 'News'*/
+  padding-top: 15px;
   font-size: 16px;
 }
 
@@ -192,7 +203,8 @@ border-radius: 3%;
 /*Shop Page Content*/
 
 .display { /*container for page content*/
-  margin: 40px; /*adds space on all sides*/
+  margin: 0 40px 40px 0; /*adds space on all sides*/
+  width: 90%;
 }
 
 .display h3 { /*Row headers (category, on sale etc)*/
@@ -204,13 +216,14 @@ border-radius: 3%;
   display: flex;
   justify-content: space-around; /*adds padding between images*/
   height: 190px; /*sets the height of the row*/
+  padding: 10px 0 5px 0; /*pushes content to add space and look cleaner*/
 }
 
 .captions { /*container for text below product images*/
-  display: flex;
+  display: flex; /*used to center content in div*/
   justify-content: center;
   align-items: center;
-  padding-right: 25px; /*pushes text to line up with images*/
+  padding: 0px 25px 10px 0; /*pushes content to add space and look cleaner*/
 }
 
 .captions p { /*text below the product images*/
@@ -218,13 +231,30 @@ border-radius: 3%;
   margin-right: auto;
 }
 
-.captions a {
-  font-size: 20px;
+.complete { /*for BUY NOW link button* (.captions a also but i am using its class instead)*/
+  font-size: 20px; /*font size*/
+  max-width: 100px; /*max width of button*/
+  padding: 10px; /*padding around text*/
+  border-radius: 10px; /*rounds edges*/
+  background-color: rgb(26, 245, 73); /*sets colour of bg/padding area*/
+  color: rgb(0, 0, 0); /*text colour*/
+  transition-duration: 0.4s; /*adds slight delay to hover effect, smoother*/
+}
+
+.complete:link {
+  text-decoration: none; /*Changes how the link looks when it has been unvisited*/
+}
+
+.complete:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.05)
 }
 
 .item1 {
-  background: url(/img/product1.png) no-repeat center;
-  background-color: white;
+  background: url(/img/product1.png) no-repeat center; /*link image from folder*/
+  background-color: white; /*sets background color of image*/
   background-size: 100%; /*sets the height of the image to fill the container*/
   flex-basis: 25%; /*sets image width*/
   transition-duration: 0.4s;
@@ -256,30 +286,6 @@ border-radius: 3%;
   transform: scale(1.1);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.19);
 }
-
-
-/*for BUY NOW link*/
-.complete {
-  font-size: 20px;
-  text-align: center;
-  max-width: 80px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgb(43, 226, 83);
-  color: rgb(255, 255, 255);
-  transition-duration: 0.4s;
-}
-
-.complete:link {
-  text-decoration: none; /*Changes how the link looks when it has been unvisited*/
-}
-
-.complete:hover {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
-  color: #000;
-  cursor: pointer;
-}
-
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 

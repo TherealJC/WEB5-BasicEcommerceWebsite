@@ -8,57 +8,50 @@
     <meta property="og:url" content="www.therealjc.me" />
     <link rel="stylesheet" type="text/css" href="../index.css">
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    <script src="../index.js"></script>
 </head>
 
-    <body>
-      <div class="header">
-        <a class="logo" title="The Crowther Express" href="/index" target="_self"></a>
-        <a class="home" title="Home Page" href="/index" target="_self"></a>
-        <a class="shop" title="Shop" href="/pages/shop" target="_self">Shop</a>
-        <a class="login" title="Log In" href="/pages/login" target="_self">Log In</a>
-        <a class="signup" title="Sign Up" href="/pages/signup" target="_self">Sign Up</a>
-    </div>
+<body>
+  <div class="header">
+    <a class="logo" title="The Crowther Express" href="/index" target="_self"></a>
+    <a class="home" title="Home Page" href="/index" target="_self"></a>
+    <a class="shop" title="Shop" href="/pages/shop" target="_self">Shop</a>
+    <span>User: </span><p id="userAcc" title="username"></p>
+    <a class="login" title="Log In" href="/pages/login" target="_self">Log In</a>
+    <a class="signup" title="Sign Up" href="/pages/signup" target="_self">Sign Up</a>
+  </div>
     
-      <div class="minibanner">
-        <h1>Processing Payment</h1>
-    </div>
-    
-    <div class="signupBox">
-        <h3>Card Details</h3>
-            <div class="form3">
-              <span>Email:</span>
-              <input type="text" name="name" autocomplete="off" required/>
-              <label for="name" class="label-name"></label>
-            </div>
-          <div class="form3">
-              <span>Bank Account #:</span>
-              <input type="text" name="name" autocomplete="off" required/>
-              <label for="name" class="label-name"></label>
-            </div>
-            <div class="form3">
-            <span>Expiry Date:</span>
-            <input type="text" name="name" autocomplete="off" required/>
-            <label for="name" class="label-name"></label>
-          </div>
-          <div class="form3">
-            <span>CVC:</span>
-            <input type="text" name="name" autocomplete="off" required/>
-            <label for="name" class="label-name"></label>
-          </div>
-          <div class="form3">
-            <span>Promo Code:</span>
-            <input type="text" name="name" autocomplete="off" required/>
-            <label for="name" class="label-name"></label>
-          </div>
-        </div>
-        
-        <a class="complete" href="/index"><p>Finish Payment</p></a>
+  <div class="minibanner">
+    <h1>Processing Payment</h1>
+  </div>
 
-        <div class="footer">     
-          <ul class="social-icons">
-            <li><a href="https://github.com/TherealJC" title="GitHub" class="icon1"></a></li>
-            <li><a href="https://www.facebook.com/" title="Facebook" class="icon2"></a></li>
-             </ul>
+  <div class="alignContent">
+    <div class="container">
+
+      <form id="form" class="form">
+        <h5>Please enter your details here</h5>
+        <div class="form-control">
+          <label for="cardNo">Card Number</label>
+          <input type="text" id="cardNo" placeholder="Enter Bank Card Number"/>
         </div>
+        <div class="form-control">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="date" id="expiryDate" placeholder="Enter Card Expiry Date"/>
+        </div>
+        <div class="form-control">
+          <label for="CVC">CVC</label>
+          <input type="text" id="CVC" placeholder="Enter CVC"/>
+        </div>
+        <input type="submit" value="Complete Payment" id="pay" class="submit" onclick="return checkPayment()"/>
+      </form>
+    </div>
+  </div>
+
+<div class="footer">     
+  <ul class="social-icons">
+    <li><a href="https://github.com/TherealJC" title="GitHub" class="icon1"></a></li>
+    <li><a href="https://www.facebook.com/" title="Facebook" class="icon2"></a></li>
+  </ul>
+</div>
 </body>
 </html>

@@ -107,6 +107,7 @@ body {
   margin-left: auto; /*adds space inbetween the buttons (shop and login/signup buttons) */
   height: inherit;
   height: 100%;
+  width: 80px;
 }
 .login:hover {
   color: white;
@@ -122,6 +123,7 @@ body {
   transition-duration: 0.4s;
   height: inherit;
   height: 100%;
+  width: 80px;
 }
 .signup:hover {
   color: white;

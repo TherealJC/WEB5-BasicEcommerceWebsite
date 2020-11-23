@@ -50,7 +50,7 @@ body {
 }
 
 .logo{ 
-  background-size: contain;
+  background-size: 50%;
   color: black;             /*font colour */
   padding: 15px 32px;
   flex-basis: 20%;
@@ -66,6 +66,7 @@ body {
 }
 
 .home {
+  background-size: 50%;
   color: black;             /*font colour */
   padding: 15px 32px;
   flex-basis: 10%;

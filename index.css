@@ -50,13 +50,13 @@ body {
 }
 
 .logo{ 
-  width: 200px; /*sets the width the button/item */
-  background: url(/img/tcelogo.jpg) no-repeat center; /*stops image from repeating and aligns to the center of the item*/
-  background-size: 100%; /*makes the image smaller than the button*/
-  background-color: #53cdf2;
-  border-bottom: solid lightblue 1px;
+  color: black;             /*font colour */
+  padding: 15px 32px;
+  flex-basis: 20%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;         /*gives Curved Edges */
   transition-duration: 0.4s;
-  height: 50px;
 }
 
 .logo:hover {
@@ -65,11 +65,13 @@ body {
 }
 
 .home {
-  width: 200px; /*sets the width of the button/item*/
-  background: url(/img/homeicon.jpg) no-repeat center; /*sets the image*/
-  background-size: cover; /*sets the size of the image*/
-  transition-duration: 0.4s;  /*Makes the hover much smoother, allowing a 0.4 second delay before changing effects*/
-  height: 50px;
+  color: black;             /*font colour */
+  padding: 15px 32px;
+  flex-basis: 10%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;         /*gives Curved Edges */
+  transition-duration: 0.4s;
 }
 .home:hover {
   background-color: #87CEFA; /* Button colour on hover*/

@@ -88,6 +88,7 @@ body {
   text-decoration: none;
   border-radius: 2px;         /*gives Curved Edges */
   transition-duration: 0.4s;
+  height: 50px;
 }
 .shop:hover {
   background-color: #87CEFA;
@@ -103,6 +104,7 @@ body {
   border-radius: 2px;
   transition-duration: 0.4s;
   margin-left: auto; /*adds space inbetween the buttons (shop and login/signup buttons) */
+  height: 50px;
 }
 .login:hover {
   background-color: #87CEFA;
@@ -117,6 +119,7 @@ body {
   text-decoration: none;
   border-radius: 2px;   
   transition-duration: 0.4s;
+  height: 50px;
 }
 .signup:hover {
   background-color: #87CEFA;
